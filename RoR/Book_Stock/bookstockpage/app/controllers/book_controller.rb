@@ -1,8 +1,7 @@
 class BookController < ApplicationController
     skip_before_action :verify_authenticity_token
     def index
-        render json: Book.all
-
+        render json: Book.all;
     end    
 
     def show 

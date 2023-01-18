@@ -5,11 +5,11 @@ class SearchController < ApplicationController
     end
     
     def create 
-        usr = Book.find_by('bookName':params[:bookName])
-        if(usr.nil?)
+        bk = Book.find_by('bookName':params[:bookName])
+        if(bk.nil?)
             render json: "book does not exist"
         else
-            render json: usr
+            render json: bk
         end
     end
 
